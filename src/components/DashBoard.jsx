@@ -29,7 +29,7 @@ const [filteredData,setFilteredData]=useState([])
   useEffect(() => {
     const data=content.filter((crop)=>crop.crop_name.toLowerCase().startsWith(item.toLowerCase()));
     setFilteredData(data)
-  },);
+  }, [content, item]);
 
   function handleChange(e) {
 
